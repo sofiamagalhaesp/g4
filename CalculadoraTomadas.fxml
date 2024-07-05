@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="10" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CalculadoraTomadasController">
+    <Label text="Digite a área em metros quadrados:" />
+    <TextField fx:id="areaTextField" />
+    <Label text="Digite o perímetro em metros:" />
+    <TextField fx:id="perimetroTextField" />
+    <Button text="Calcular" onAction="#calcular" />
+    <Label fx:id="resultadoLabel" />
+</VBox>
