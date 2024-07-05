@@ -55,7 +55,7 @@ Desenvolver um projeto detalhado de instalações elétricas residenciais que at
 ## Seção 4 - Modelagem Inicial
 
 ### 4.1 Diagrama de Classes
-```plaintext
+```
 +------------------------+
 |      CalculoIluminacao |
 +------------------------+
@@ -80,10 +80,14 @@ Desenvolver um projeto detalhado de instalações elétricas residenciais que at
 +------------------------+
 | + start()              |
 +------------------------+
-
+```
 ### 4.2 Diagrama de sequência
 
-Usuario -> Aplicativo: Inserir dados (área, perímetro)
-Aplicativo -> CalculoIluminacao: Calcular total VA e quantidade
-Aplicativo -> CalculoTomadas: Calcular número de tomadas
-Aplicativo -> Usuario: Mostrar resultado
+**Usuario** -> Aplicativo: Inserir dados (área, perímetro)
+**Aplicativo** -> CalculoIluminacao: Calcular total VA e quantidade
+**Aplicativo** -> CalculoTomadas: Calcular número de tomadas
+**Aplicativo** -> Usuario: Mostrar resultado
+
+### 4.3 Casos de Uso
+- **Calcular Iluminação:** O usuário insere a área em metros quadrados e o sistema calcula a necessidade de iluminação em VA e a quantidade de pontos de iluminação.
+- **Calcular Tomadas:** O usuário insere a área e o perímetro, e o sistema calcula o número de tomadas necessárias.
