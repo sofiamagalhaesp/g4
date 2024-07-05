@@ -84,8 +84,11 @@ Desenvolver um projeto detalhado de instalações elétricas residenciais que at
 ### 4.2 Diagrama de sequência
 
 **Usuario** -> Aplicativo: Inserir dados (área, perímetro)
+
 **Aplicativo** -> CalculoIluminacao: Calcular total VA e quantidade
+
 **Aplicativo** -> CalculoTomadas: Calcular número de tomadas
+
 **Aplicativo** -> Usuario: Mostrar resultado
 
 ### 4.3 Casos de Uso
