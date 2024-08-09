@@ -10,8 +10,9 @@ Inicialmente, o projeto estava baseado nos conhecimentos prévios da Nathalia, q
 
 - Diagrama de classes  
 - Implementação das regras da ABNT (lógica das calculadoras) 
-- Desenvolvimento do backend  
-- Documentação  
+- Desenvolvimento do backend na etapa I
+- Desenvolvimento de frontend na etapa II 
+- Documentação geral
 
 ## Conclusão
 
