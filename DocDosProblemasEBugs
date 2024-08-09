@@ -1,0 +1,88 @@
+# Documento de Bugs do Projeto de Instalações Elétricas Residenciais
+
+**Autores:** Sofia Magalhães e Saulo Candido
+
+---
+
+## Objetivo do Código
+
+O objetivo principal do código é realizar cálculos simples de pontos de iluminação e tomadas em uma residência, utilizando Java como a linguagem de programação.
+
+## Desafios
+
+- Estudo das normas de instalações prediais, baseadas em diversos cálculos avançados e em situações diversas.
+- Definição dos requisitos necessários para iniciar o desenvolvimento do programa em Java.
+- Desenvolvimento da lógica de programação para solucionar problemas reais, baseados nas diferentes necessidades do usuário, incluindo a criação de classes e diagramas.
+- Programação e compilação do código sem erros de interpretação.
+- Correção de erros eventuais que surgiram durante o desenvolvimento.
+
+## Problemas Identificados
+
+### 1. Calculadora de Tomadas
+
+**Descrição:**  
+O código assume que o perímetro sempre será maior que zero. Se for passado um valor negativo ou zero, o cálculo `(int)Math.ceil(perimetro / 5)` pode não fazer sentido.
+
+**Solução Proposta:**  
+Certifique-se de que os valores de perímetro são validados antes de realizar o cálculo. Caso o valor seja inválido, o programa deve gerar uma mensagem de erro apropriada.
+
+### 2. Classe `ProjetoDeInstalacoes`
+
+#### **2.1. Erro de Declaração de Atributos Duplicados**
+
+**Descrição:**  
+O atributo `comodos` foi declarado duas vezes no início da classe `ProjetoDeInstalacaoEletrica`, o que pode causar erros de compilação.
+
+**Correção Proposta:**  
+Remover a duplicação, mantendo apenas uma declaração.
+
+#### **2.2. Comentário Mal Posicionado**
+
+**Descrição:**  
+O comentário que define o custo por metro de fio (`CUSTO_POR_METRO_FIO`) está misturado com a declaração do atributo `comodos`.
+
+**Correção Proposta:**  
+Separar o comentário da declaração do atributo para evitar confusão.
+
+#### **2.3. Uso de Variável `quantidadeDeFiosNecessarios` para Armazenar Resultado Temporário**
+
+**Melhoria Proposta:**  
+No método `calcularQuantidadeDeFiosNecessarios`, a variável `quantidadeDeFiosNecessarios` é usada para acumular o número de fios necessários. Essa prática pode ser melhorada para garantir maior clareza e facilidade de manutenção do código.
+
+### 3. Verificação e Tratamento de Exceções ao Calcular Custo dos Componentes
+
+**Problema:**  
+No método `calcularCustoTotalDoProjeto`, não há tratamento de exceções caso um componente não tenha um custo definido ou retorne um valor inválido.
+
+**Solução Proposta:**  
+Implementar verificações para assegurar que todos os componentes possuam um custo válido antes de realizar o cálculo.
+
+### 4. Erro de Sintaxe em Código Final
+
+**Descrição:**  
+Há um bloco de código desconectado do restante do programa (`"Será necessário " + quantidadeDePontos + " pontos de iluminação na área desejada."`).
+
+**Correção Proposta:**  
+Revisar ou remover esse bloco de código se ele não fizer parte do contexto atual.
+
+### 5. Uso de Variáveis Não Definidas
+
+**Descrição:**  
+A variável `resultadoLabel` no bloco final não está definida no código fornecido.
+
+**Correção Proposta:**  
+Certifique-se de que `resultadoLabel` seja declarada e inicializada corretamente antes do uso, ou substitua-a por uma variável existente.
+
+### 6. Organização Geral do Código
+
+**Melhoria Proposta:**  
+O código mistura a lógica da interface do usuário (ex.: uso de `Alert`) com a lógica de negócios. Para um design mais limpo, considere separar essas responsabilidades em classes diferentes, utilizando o padrão MVC (Model-View-Controller).
+
+### 7. Tratamento de Erros de Entrada de Dados
+
+**Melhoria Proposta:**  
+Embora o código tente capturar exceções com `NumberFormatException`, seria interessante validar os dados de entrada antes de tentar convertê-los, reduzindo a necessidade de capturar exceções.
+
+## Conclusão
+
+Após extensas pesquisas e várias tentativas de solucionar os problemas encontrados, a maioria dos erros foi corrigida, permitindo o progresso no desenvolvimento do projeto. Esse processo, embora desafiador, foi fundamental para aprimorar o conhecimento e garantir a continuidade do trabalho.
